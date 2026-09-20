@@ -5,16 +5,87 @@
 body{
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #0d1117;
+    background: #081C1C;
     /* background: #e9eaed; */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
-    color: #e6edf3;
+    color: #F2EEE5;
 }
+
+
+/* Navbar */
+
+.navbar{
+    width: 100%;
+    max-width: 1100px;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.logo i{
+    font-size: 1.8rem;
+}
+
+.tagline{
+    color: #8F9F99;
+    font-size: 0.9rem;
+}
+
+.main-content{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.intro{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero */
+
+.hero{
+    /* margin-top: 40px; */
+    margin-bottom: 10px;
+}
+
+.hero h1{
+    font-size: 2.8rem;
+    margin: 0;
+    color: #F2EEE5;
+}
+
+.hero h1 span{
+    color: #238F88;
+}
+
+.hero p{
+    color: #8F9F99;
+    font-size: 1rem;
+    margin-top: 12px;
+}
+
+/* Search Bar */
 
 .search-container{
     width: 100%;
@@ -22,54 +93,290 @@ body{
     padding: 20px;
     margin: 20px;
     display: flex;
+    flex-direction: row;
+    align-items: stretch;
     gap: 10px;
 }
 
-.search-container input{
+.search-input{
     flex: 1;
-    border: 1px solid #30363d;
-    background-color: #161b22;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    background-color: #0D2928;
+    border: 1px solid #1D3D3B;
     border-radius: 10px;
-    color: #f0f6fc;
-    padding: 1rem;
+}
+
+.search-input i{
+    color: #8F9F99;
+}
+
+.search-input input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #F2EEE5;
+    padding: 1rem 0;
     font-size: 1rem;
 }
 
-.search-container input:focus{
+.search-input input:focus{
     outline: none;
 }
 
 .search-container button{
-    background-color: #2386ff;
-    border-radius: 10px;
-    color: white;
+    background-color: #238F88;
     border: none;
+    border-radius: 10px;
+    color: #F2EEE5;
     padding: 0 1.5rem;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-#card{
-    max-width: 500px;
-    background-color: #161b22;
-    border-radius: 15px;
+.search-container button:hover{
+    background-color: #2AA198;
+}
+
+/* Card */
+
+.hidden{
+    display: none;
+}
+
+#card {
+    width: 100%;
+    max-width: 650px;
+    background-color: #0D2928;
+    border: 1px solid #1D3D3B;
+    border-radius: 18px;
     padding: 2rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
 #card h2{
-    color: #e6edf3;
-    font-size: 1.6rem;
-    margin: 10px 0 0;
+    color: #F2EEE5;
+    font-size: 1.7rem;
+    margin: 8px 0 0;
 }
 
+#card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #238F88;
+    margin-bottom: 10px;
+}
+
+/* Card Details */
+
 .username{
-    color: #8b949e;
-    font-size: 0.90rem;
-    margin: 5px 0 0;
+    color: #8F9F99;
+    font-size: 0.9rem;
+    margin: 4px 0 0;
 }
 
 .bio{
+    font-size: 1.15rem;
+    margin: 14px 0 24px;
+    color: #F2EEE5;
+}
+
+.profile_info{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    color: #8F9F99;
+    /* font-size: 1rem; */
+}
+
+.profile_info i{
+    margin-right: 6px;
+    color: #8F9F99;
+}
+
+
+.website_link{
+    color: #8F9F99;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.website_link:hover{
+    color: #238F88;
+}
+
+/* Stats */
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #1D3D3B;
+    border-bottom: 1px solid #1D3D3B;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+.stats > div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats > div:not(:first-child){
+    border-left: 1px solid #1D3D3B;
+    padding-left: 30px;
+}
+
+.stats > div strong{
+    color: #238F88 ;
     font-size: 1.2rem;
-    margin: 15px 0 25px;
-    color: #f0f6fc;
+}
+
+.stats > div span{
+    color: #8F9F99;
+    font-size: 0.9rem;
+}
+
+/* Repsoitories */
+
+.repos_header{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.repos_header a{
+    color: #8F9F99;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.repos_header a:hover{
+    color: #238F88;
+}
+
+.repo-card {
+    background: #081C1C;
+    border: 1px solid #1D3D3B;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: 0.2s;
+}
+
+.repo-card:hover {
+    border-color: #238F88;
+}
+
+.repo-card h4 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+}
+
+.repo-card h4 a {
+    color: #238F88;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.repo-card h4 a:hover {
+    color: #2AA198;
+    text-decoration: underline;
+}
+
+.repo-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1;
+}
+
+.repo-main > i {
+    color: #238F88;
+    font-size: 1.1rem;
+    /* margin-top: 0px; */
+}
+
+.repo-card h4 {
+    margin: 0 0 6px;
+    color: #238F88;
+    font-size: 1rem;
+}
+
+.repo-card p {
+    margin: 0;
+    color: #8F9F99;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.repo-stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #8F9F99;
+    font-size: 0.8rem;
+}
+
+.repo-stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.repo-stats i {
+    font-size: 0.75rem;
+}
+
+.repo-stats span:first-child i {
+    color: #238F88;
+}
+
+.github-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #238F88;
+    color: #F2EEE5;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.github-btn:hover {
+    background: #9E4055;
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    max-width: 1100px;
+    margin-top: auto;
+    padding: 25px 20px;
+    border-top: 1px solid #1D3D3B;
+    color: #8F9F99;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    margin: 0;
+}
+
+.footer span{
+    color: #9E4055;
 }

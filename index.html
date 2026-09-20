@@ -5,20 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Profile Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>GitHub Profile Finder</h1>
-    <div class="search-container">
-        <input type="text" id="username" placeholder="Enter GitHub Username...">
 
-        <button id="search_btn">Search</button>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-brands fa-github"></i>
+            <strong>GitHub Profile Finder</strong>
+        </div>
+        <span class="tagline">Search. Discover. Explore</span>
+    </header>
+    <main class="main-content">
 
-    </div>
+    <section class="intro">
 
-    <div id="card">
-    </div>
+        <section class="hero">
+            <h1>Find Any <span>GitHub Profile</span></h1>
+            <p>
+                Search for a GitHub user and view their profile details,
+                repositories and more.
+            </p>
+        </section>
+
+        <div class="search-container">
+            <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="username" placeholder="Enter GitHub Username...">
+            </div>
+
+            <button id="search_btn">Search</button>
+        </div>
+
+    </section>
+
+    <div id="card" class="hidden"></div>
+
+</main>
+
+    <footer class="footer">
+        <p>Made with <span>♥</span> by Piyush Jain</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
