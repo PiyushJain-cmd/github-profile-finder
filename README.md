@@ -37,13 +37,13 @@ This project uses the GitHub REST API to retrieve user and repository informatio
 ### User Profile
 
 ```text
-GET https://api.github.com/users/{PiyushJain-cmd}
+GET https://api.github.com/users/{username}
 ```
 
 ### User Repositories
 
 ```text
-GET https://api.github.com/users/{PiyushJain-cmd}/repos
+GET https://api.github.com/users/{username}/repos
 ```
 
 The repository request is sorted by stars and limited to the top 3 repositories.
